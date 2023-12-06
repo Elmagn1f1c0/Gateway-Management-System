@@ -1,0 +1,17 @@
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\bin\Debug\net6.0\Gateway Management.core.deps.json
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\bin\Debug\net6.0\Gateway Management.core.runtimeconfig.json
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\bin\Debug\net6.0\Gateway Management.core.dll
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\bin\Debug\net6.0\Gateway Management.core.pdb
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\bin\Debug\net6.0\Gateway Management.Data.dll
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\bin\Debug\net6.0\Gateway Management.Data.pdb
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.AssemblyInfo.cs
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.csproj.CopyComplete
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.dll
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\refint\Gateway Management.core.dll
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.pdb
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\Gateway Management.core.genruntimeconfig.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.core\obj\Debug\net6.0\ref\Gateway Management.core.dll

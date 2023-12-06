@@ -1,0 +1,14 @@
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\bin\Debug\net6.0\Gateway Management.Data.deps.json
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\bin\Debug\net6.0\Gateway Management.Data.runtimeconfig.json
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\bin\Debug\net6.0\Gateway Management.Data.dll
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\bin\Debug\net6.0\Gateway Management.Data.pdb
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.AssemblyInfo.cs
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.dll
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\refint\Gateway Management.Data.dll
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.pdb
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\Gateway Management.Data.genruntimeconfig.cache
+C:\Users\hp\Desktop\Gateway Management\Gateway Management\Gateway Management.Data\obj\Debug\net6.0\ref\Gateway Management.Data.dll
