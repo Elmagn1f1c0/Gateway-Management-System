@@ -172,29 +172,6 @@ namespace Gateway_Management.Data.Repository.GatewayRepository
                 Message = "Peripheral device added to the specified gateway successfully"
             };
         }
-        //public async Task<ServiceResponse<bool>> RemoveDeviceFromGateway(int Id)
-        //{
-        //    var device = await _context.Gateways.FindAsync(Id);
-
-        //    if (device == null)
-        //    {
-        //        return new ServiceResponse<bool>
-        //        {
-        //            StatusCode = 400,
-        //            Success = false,
-        //            Message = "Gateway not found"
-        //        };
-        //    }
-        //    _context.Gateways.Remove(device);
-        //    await _context.SaveChangesAsync();
-
-        //    return new ServiceResponse<bool> 
-        //    { 
-        //        StatusCode = 200,
-        //        Success = true, 
-        //        Message = "Gateway removed successfully" 
-        //    };
-        //}
         public async Task<ServiceResponse<bool>> RemoveDeviceFromGateway(int Id)
         {
             var gateway = await _context.Gateways.Include(g => g.Devices).FirstOrDefaultAsync(g => g.Id == Id);
@@ -209,13 +186,14 @@ namespace Gateway_Management.Data.Repository.GatewayRepository
                 };
             }
 
-            _context.PeripheralDevices.RemoveRange(gateway.Devices); // Remove associated devices
+            _context.PeripheralDevices.RemoveRange(gateway.Devices); 
 
-            _context.Gateways.Remove(gateway); // Remove the gateway itself
+            _context.Gateways.Remove(gateway); 
             await _context.SaveChangesAsync();
 
             return new ServiceResponse<bool>
             {
+                Data = true,
                 StatusCode = 200,
                 Success = true,
                 Message = "Gateway and all associated devices removed successfully"

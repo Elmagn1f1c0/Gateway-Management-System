@@ -4,6 +4,7 @@ using Gateway_Management.Models;
 using Microsoft.AspNetCore.Mvc;
 using Gateway_Management.core.Services.GatewayServices;
 using Gateway_Management.Data.DTO;
+using Gateway_Management.Data.Enum;
 
 namespace Gateway_Management.Tests.Controllers
 {
@@ -105,6 +106,132 @@ namespace Gateway_Management.Tests.Controllers
             {
                 Assert.True(false, "Unexpected value type returned");
             }
+        }
+        [Fact]
+        public async Task CreateGateway_Returns_OkObjectResult_When_Successful()
+        {
+            // Arrange
+            var mockService = new Mock<IGatewayService>();
+            var controller = new GatewayController(mockService.Object);
+            var gateway = new Gateway {
+                Id = 18,
+                SerialNumber = "strhjjkking",
+                Name = "string",
+                IPv4Address = "192.168.1.7",
+                Devices = new List<PeripheralDevice>
+    {
+        new PeripheralDevice
+        {
+            DeviceId = 46,
+            UID = 0,
+            Vendor = "string",
+            DateCreated = DateTime.Parse("2023-12-08T03:13:24.152"),
+            Status = Status.Online, 
+            GatewayId = 18
+        }
+    }
+            };
+            var serviceResponse = new ServiceResponse<Gateway>
+            {
+                StatusCode = 200,
+                Success = true,
+                Data = gateway
+            };
+
+            mockService.Setup(service => service.CreateGateway(It.IsAny<Gateway>())).ReturnsAsync(serviceResponse);
+
+            // Act
+            var result = await controller.CreateGateway(gateway);
+
+            // Assert
+            Assert.IsType<OkObjectResult>(result.Result);
+            var okResult = result.Result as OkObjectResult;
+            Assert.Equal(serviceResponse, okResult?.Value);
+        }
+
+        
+        [Fact]
+        public async Task AddPeripheralDeviceToGateway_Returns_OkObjectResult_When_Successful()
+        {
+            // Arrange
+            var mockService = new Mock<IGatewayService>();
+            var controller = new GatewayController(mockService.Object);
+            var device = new PeripheralDevice
+            {
+                DeviceId = 46,
+                UID = 0,
+                Vendor = "string",
+                DateCreated = DateTime.Parse("2023-12-08T03:13:24.152"),
+                Status = Status.Online,
+                GatewayId = 18
+            };
+            var gatewayId = 1; 
+            var serviceResponse = new ServiceResponse<bool>
+            {
+                StatusCode = 200,
+                Success = true,
+                Data = true
+            };
+
+            mockService.Setup(service => service.AddPeripheralDeviceToGateway(gatewayId, device)).ReturnsAsync(serviceResponse);
+
+            // Act
+            var result = await controller.AddPeripheralDeviceToGateway(gatewayId, device);
+
+            // Assert
+            Assert.IsType<OkObjectResult>(result.Result);
+            var okResult = result.Result as OkObjectResult;
+            Assert.Equal(serviceResponse, okResult?.Value);
+        }
+
+        [Fact]
+        public async Task RemoveGateway_Returns_OkObjectResult_When_Successful()
+        {
+            // Arrange
+            var mockService = new Mock<IGatewayService>();
+            var controller = new GatewayController(mockService.Object);
+            var gatewayId = 1; 
+            var serviceResponse = new ServiceResponse<bool>
+            {
+                StatusCode = 200,
+                Success = true,
+                Data = true
+            };
+
+            mockService.Setup(service => service.RemoveDeviceFromGateway(gatewayId)).ReturnsAsync(serviceResponse);
+
+            // Act
+            var result = await controller.RemoveGateway(gatewayId);
+
+            // Assert
+            Assert.IsType<OkObjectResult>(result.Result);
+            var okResult = result.Result as OkObjectResult;
+            Assert.Equal(serviceResponse, okResult?.Value);
+        }
+
+        [Fact]
+        public async Task RemovePeripheralDevice_Returns_OkObjectResult_When_Successful()
+        {
+            // Arrange
+            var mockService = new Mock<IGatewayService>();
+            var controller = new GatewayController(mockService.Object);
+            var deviceId = 1; 
+            var serviceResponse = new ServiceResponse<bool>
+            {
+                StatusCode = 200,
+                Success = true,
+                Data = true
+            };
+
+            mockService.Setup(service => service.RemovePeripheralDevice(deviceId)).ReturnsAsync(serviceResponse);
+
+            // Act
+            var result = await controller.RemovePeripheralDevice(deviceId);
+
+            // Assert
+            Assert.IsType<OkObjectResult>(result.Result);
+            var okResult = result.Result as OkObjectResult;
+            Assert.Equal(serviceResponse, okResult?.Value);
         }
 
     }

@@ -20,7 +20,7 @@ namespace Gateway_Management.Controllers
             var result = await _service.GetAllGateways();
             return Ok(result);
         }
-        [HttpGet("serial-number")]
+        [HttpGet("{serialNumber}")]
         public async Task<ActionResult<ServiceResponse<Gateway>>> GetGatewayBySerialNumber(string serialNumber)
         {
             var result = await _service.GetGatewayBySerialNumber(serialNumber);
@@ -38,7 +38,7 @@ namespace Gateway_Management.Controllers
             var response = await _service.AddPeripheralDeviceToGateway(gatewayId, device);
             return Ok(response);
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<ServiceResponse<Gateway>>> RemoveGateway(int id)
         {
             var result = await _service.RemoveDeviceFromGateway(id);
