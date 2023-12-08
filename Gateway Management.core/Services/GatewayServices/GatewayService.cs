@@ -13,9 +13,9 @@ namespace Gateway_Management.core.Services.GatewayServices
             _repository = repository;
         }
 
-        public async Task<ServiceResponse<Gateway>> AddDeviceToGateway(string serialNumber, PeripheralDevice device)
+        public async Task<ServiceResponse<bool>> AddPeripheralDeviceToGateway(int gatewayId, PeripheralDevice device)
         {
-            return await _repository.AddDeviceToGateway(serialNumber, device);
+            return await _repository.AddPeripheralDeviceToGateway(gatewayId, device);
         }
 
         public async Task<ServiceResponse<Gateway>> CreateGateway(Gateway gateway)
@@ -31,6 +31,11 @@ namespace Gateway_Management.core.Services.GatewayServices
         public async Task<ServiceResponse<Gateway>> GetGatewayBySerialNumber(string serialNumber)
         {
             return await _repository.GetGatewayBySerialNumber(serialNumber);
+        }
+
+        public async Task<ServiceResponse<bool>> RemovePeripheralDevice(int deviceId)
+        {
+            return await _repository.RemovePeripheralDevice(deviceId);
         }
 
         public async Task<ServiceResponse<bool>> RemoveDeviceFromGateway(int Id)

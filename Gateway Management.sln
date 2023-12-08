@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway Management.Data", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway Management.core", "Gateway Management.core\Gateway Management.core.csproj", "{32A0992E-7C4B-4B5B-B990-2153EE5AF6E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayManagement.Test", "GatewayManagement.Test\GatewayManagement.Test.csproj", "{BE4157F8-3F91-4363-8336-CAC1EB0E8DFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{32A0992E-7C4B-4B5B-B990-2153EE5AF6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32A0992E-7C4B-4B5B-B990-2153EE5AF6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32A0992E-7C4B-4B5B-B990-2153EE5AF6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4157F8-3F91-4363-8336-CAC1EB0E8DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4157F8-3F91-4363-8336-CAC1EB0E8DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4157F8-3F91-4363-8336-CAC1EB0E8DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4157F8-3F91-4363-8336-CAC1EB0E8DFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

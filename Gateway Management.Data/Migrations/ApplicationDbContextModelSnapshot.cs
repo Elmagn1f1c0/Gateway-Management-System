@@ -46,11 +46,11 @@ namespace Gateway_Management.Data.Migrations
 
             modelBuilder.Entity("Gateway_Management.Models.PeripheralDevice", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("DeviceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DeviceId"), 1L, 1);
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -58,8 +58,8 @@ namespace Gateway_Management.Data.Migrations
                     b.Property<int?>("GatewayId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<int>("UID")
                         .HasColumnType("int");
@@ -67,7 +67,7 @@ namespace Gateway_Management.Data.Migrations
                     b.Property<string>("Vendor")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("DeviceId");
 
                     b.HasIndex("GatewayId");
 
@@ -274,9 +274,11 @@ namespace Gateway_Management.Data.Migrations
 
             modelBuilder.Entity("Gateway_Management.Models.PeripheralDevice", b =>
                 {
-                    b.HasOne("Gateway_Management.Models.Gateway", null)
+                    b.HasOne("Gateway_Management.Models.Gateway", "Gateway")
                         .WithMany("Devices")
                         .HasForeignKey("GatewayId");
+
+                    b.Navigation("Gateway");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

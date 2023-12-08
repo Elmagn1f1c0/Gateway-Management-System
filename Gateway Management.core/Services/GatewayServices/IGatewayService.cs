@@ -8,7 +8,8 @@ namespace Gateway_Management.core.Services.GatewayServices
         Task<ServiceResponse<List<Gateway>>> GetAllGateways();
         Task<ServiceResponse<Gateway>> GetGatewayBySerialNumber(string serialNumber);
         Task<ServiceResponse<Gateway>> CreateGateway(Gateway gateway);
-        Task<ServiceResponse<Gateway>> AddDeviceToGateway(string serialNumber, PeripheralDevice device);
+        Task<ServiceResponse<bool>> AddPeripheralDeviceToGateway(int gatewayId, PeripheralDevice device);
         Task<ServiceResponse<bool>> RemoveDeviceFromGateway(int Id);
+        Task<ServiceResponse<bool>> RemovePeripheralDevice(int deviceId);
     }
 }

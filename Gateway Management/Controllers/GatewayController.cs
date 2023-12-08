@@ -32,16 +32,22 @@ namespace Gateway_Management.Controllers
             var result = await _service.CreateGateway(device);
             return Ok(result);
         }
-        [HttpPost("{serialNumber}/devices")]
-        public IActionResult AddDeviceToGateway(string serialNumber, [FromBody] PeripheralDevice device)
+        [HttpPost("/peripheral-device/{gatewayId}")]
+        public async Task<ActionResult<ServiceResponse<bool>>> AddPeripheralDeviceToGateway(int gatewayId, PeripheralDevice device)
         {
-            var response = _service.AddDeviceToGateway(serialNumber, device);
+            var response = await _service.AddPeripheralDeviceToGateway(gatewayId, device);
             return Ok(response);
         }
         [HttpDelete]
         public async Task<ActionResult<ServiceResponse<Gateway>>> RemoveGateway(int id)
         {
             var result = await _service.RemoveDeviceFromGateway(id);
+            return Ok(result);
+        } 
+        [HttpDelete("/peripheraldevice/{deviceId}")]
+        public async Task<ActionResult<ServiceResponse<Gateway>>> RemovePeripheralDevice(int deviceId)
+        {
+            var result = await _service.RemovePeripheralDevice(deviceId);
             return Ok(result);
         }
         
